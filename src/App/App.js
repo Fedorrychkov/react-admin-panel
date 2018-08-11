@@ -4,8 +4,6 @@ import { Switch, Route } from 'react-router-dom';
 
 import AuthPage from './Pages/Auth/AuthPage';
 
-import './App.css';
-
 const App = () => {
   return (
     <section className="App">
