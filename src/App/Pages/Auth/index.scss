@@ -1,0 +1,15 @@
+@import '../../../assets/styles/variables';
+
+.auth {
+    min-height: 100vh;
+    background-color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        font-size: $font-lg;
+        font-weight: bold;
+        margin: $offset-md 0 $offset-xl;
+    }
+}

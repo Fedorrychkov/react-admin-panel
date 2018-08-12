@@ -1,0 +1,87 @@
+// Font size
+$font-mc: 8px;
+$font-sm: 12px;
+$font-md: 16px;
+$font-lg: 24px;
+$font-xl: 32px;
+
+// Offsets
+$offset-mc: 6px;
+$offset-sm: 8px;
+$offset-md: 16px;
+$offset-lg: 32px;
+$offset-xl: 64px;
+
+// layout width
+    // Media Query Ranges
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$extra-large-and-up: "only screen and (min-width : #{$large-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
+
+
+$card-shadow: 0 0 20px -3px rgba(0, 0, 0, .2);
+
+$cards-color:               #fefefe;
+$red-color:                 #b65149;
+$violet-color:              #9560b4;
+$blue-color:                #52b4e1;
+$sea-color:                 #57d0c9;
+$button-start:              #4EC5FF;
+$green-color:               #6fca89;
+$olive-color:               #a2c752;
+$yellow-color:              #f0b73d;
+$orange-color:              #f0783d;
+$topbar-color:              #f5686e;
+
+$navbar-color:              #0955c9;
+$navbar-color-hover:        #2879f5;
+
+$bluer-color:               #5277DF;
+
+$red-color:                 #c40022;
+$red-color-light:           #db3232;
+
+$darkest-color:             #2e363e;
+$darker-color:              #4a5159;
+$dark-color:                #6b7784;
+$gray-color:                #8f9ba9;
+$light-color:               #bac4cf;
+$lighter-color:             #d3dbe3;
+$lightest-color:            #e4ebf3;
+$smoke-color:               #f3f7fc;
+$grayer-color:              #f2f2f2;
+$ligher-color:              #c4c4c4;
+$navbar-color:              #ebebeb;
+$content-color:             #fcfcfc;
+
+$white-color:               #ffffff;
+
+$success-color:             #75C9BF;
+
+$call-screen:               #b5b5b5;
+
+$purple-color:              #7582C9;
+
+$black-color:               #000000;
+$black-color-light:         #494949;
+$black-color-alpha-half:    rgba(0, 0, 0, .4);
+
+$seafoam-color:             #93B38C;
+
+$rosy-color-pink:           #F4686E;
+$rosy-color-ligh:           #FFC2C3;
+
+
+$animation-fast:            .15s;
+$animation-medium:          .3s;
+$animation-slow:            .45s;

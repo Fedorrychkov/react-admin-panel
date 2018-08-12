@@ -1,0 +1,8 @@
+.topbar {
+  background-color: inherit; }
+  .topbar__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .topbar .update {
+    cursor: pointer; }

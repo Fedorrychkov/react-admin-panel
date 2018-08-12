@@ -1,0 +1,15 @@
+@import '../../../assets/styles/variables';
+
+.topbar {
+    background-color: inherit;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .update {
+        cursor: pointer;
+    }
+}
