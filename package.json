@@ -93,6 +93,18 @@
       "mjs"
     ]
   },
+  "languages": [
+    {
+      "id": "javascript",
+      "aliases": [
+        "JavaScript",
+        "js"
+      ],
+      "filenamePatterns": [
+        "*.js.flow"
+      ]
+    }
+  ],
   "babel": {
     "presets": [
       "react-app"
