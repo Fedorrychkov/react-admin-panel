@@ -41,11 +41,13 @@ class App extends React.Component<{}, State> {
 
   render() {
     return (
-      <section className={`App ${this.state.dark? 'layout__dark' : 'layout__light'}`}>
+      <section className={`App layout ${this.state.dark? 'layout__dark' : 'layout__light'}`}>
         <TopBar/>
-        <Switch>
-          <Route path='/auth' component={AuthPage}/>
-        </Switch>
+        <section className="content">
+          <Switch>
+            <Route path='/auth' component={AuthPage}/>
+          </Switch>
+        </section>
       </section>
     );
   }
