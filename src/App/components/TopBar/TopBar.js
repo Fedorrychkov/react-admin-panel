@@ -6,6 +6,7 @@ import Switch from '@material-ui/core/Switch';
 import './index.css';
 import { changeTheme } from '../../store/layout/actions';
 import { LIGHT_LAYOUT, DARK_LAYOUT } from '../../store/layout/actionTypes';
+import { store } from '../../store/reducers';
 
 class TopBar extends React.Component<{}, {}> {
     
@@ -38,8 +39,10 @@ class TopBar extends React.Component<{}, {}> {
 
     updateTheme(state) {
         const theme = changeTheme(this.state.currentTheme);
-        localStorage.setItem('f-panel.theme', theme.type);
+        console.log(theme);
+        // localStorage.setItem('f-panel.theme', theme.type);
         this.setState({ currentTheme: theme.type, dark: state });
+        store.dispatch(changeTheme(this.state.currentTheme));
     };
 
     handleChange = name => event => {
