@@ -12,37 +12,53 @@ class TopBar extends React.Component<{}, {}> {
     
     constructor(props) {
         super(props);
-        this.state = {
-            currentTheme: LIGHT_LAYOUT,
-            dark: false
-        };
 
+        this.storeChange = this.storeChange.bind(this);
+
+        this.state = { dark: false, store: store.subscribe(this.storeChange) };
         this.handleChange = this.handleChange.bind(this);
         this.updateTheme = this.updateTheme.bind(this);
     }
 
     componentWillMount() {
-        let theme = localStorage.getItem('f-panel.theme');
+        let currentValue = store.getState();
+        let theme = currentValue.layoutTheme.currentLayout;
         switch (theme) {
             case DARK_LAYOUT:
-              this.setState({dark: true});
-              break;
+                this.setState({dark: true});
+                break;
             case LIGHT_LAYOUT:
-              this.setState({dark: false});
-              break;
+                this.setState({dark: false});
+                break;
             default:
-              this.setState({dark: false});
-              break;
-          }
-        this.setState({ currentTheme: theme});
+                this.setState({dark: false});
+                break;
+            }
+    }
+    
+    storeChange() {
     }
 
     updateTheme(state) {
-        const theme = changeTheme(this.state.currentTheme);
+        this.setState({ dark: state });
+        let currentValue = store.getState();
+        let theme = currentValue.layoutTheme.currentLayout;
         console.log(theme);
-        // localStorage.setItem('f-panel.theme', theme.type);
-        this.setState({ currentTheme: theme.type, dark: state });
-        store.dispatch(changeTheme(this.state.currentTheme));
+        switch (theme) {
+          case DARK_LAYOUT:
+            store.dispatch(changeTheme(DARK_LAYOUT));
+            localStorage.setItem('f-panel.theme', LIGHT_LAYOUT);
+            break;
+          case LIGHT_LAYOUT:
+            store.dispatch(changeTheme(LIGHT_LAYOUT));
+            localStorage.setItem('f-panel.theme', DARK_LAYOUT);
+            break;
+          default:
+            store.dispatch(changeTheme(LIGHT_LAYOUT));
+            localStorage.setItem('f-panel.theme', DARK_LAYOUT);
+            break;
+        }
+        
     };
 
     handleChange = name => event => {
@@ -68,6 +84,6 @@ class TopBar extends React.Component<{}, {}> {
     }
 };
 
-TopBar = connect()(TopBar);
+// TopBar = connect()(TopBar);
 
 export default TopBar;
