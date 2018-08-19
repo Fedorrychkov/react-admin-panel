@@ -1,5 +1,5 @@
 .auth {
-  min-height: 100vh;
+  min-height: calc(100vh - 48px);
   background-color: inherit;
   display: flex;
   justify-content: center;
@@ -8,3 +8,8 @@
     font-size: 24px;
     font-weight: bold;
     margin: 16px 0 64px; }
+  .auth__box, .auth__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; }

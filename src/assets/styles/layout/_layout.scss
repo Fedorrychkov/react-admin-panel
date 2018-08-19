@@ -1,4 +1,6 @@
 .layout {
+    min-height: 100vh;
+    height: auto;
 
     &__light {
         background-color: $smoke-color;
