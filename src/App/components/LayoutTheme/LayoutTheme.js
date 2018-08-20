@@ -8,7 +8,6 @@ import SmartTopBar from '../../containers/SmartTopBar/SmartTopBar';
 
 import { AuthPage } from '../../Pages/Auth/AuthPage';
 import Panel from '../../Pages/Panel/Panel';
-import NotFoundPage from '../../Pages/NotFoundPage/NotFoundPage';
 
 const LayoutTheme = (props: any) => {
     const { layout } = props;
@@ -20,7 +19,7 @@ const LayoutTheme = (props: any) => {
                 <Switch>
                     <Route name="panel" exact path='/' component={Panel}/>
                     <Route name="auth" path='/auth' component={AuthPage}/>
-                    <Route name="error" component={Panel} render={() => <NotFoundPage />}/>
+                    <Route name="error" component={Panel}/>
                 </Switch>
             </section>
         </section>

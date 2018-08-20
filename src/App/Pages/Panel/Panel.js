@@ -5,6 +5,7 @@ import PanelSidebar from '../../components/PanelSidebar/PanelSidebar';
 import NotFoundPage from '../NotFoundPage/NotFoundPage';
 
 import './index.css';
+import Projects from './Projects/Projects';
 
 const Panel = () => {
     return (
@@ -13,7 +14,8 @@ const Panel = () => {
                 <PanelSidebar />
                 <main className="panel__content">
                     <Switch>
-                        <Route name="index" exact path="/" render={() => <div>HOLLA</div>}/>
+                        <Route name="index" exact path="/" component={Projects}/>
+                        <Route name="index" path="/projects" component={Projects}/>
                         <Route name="error" component={NotFoundPage}/>
                     </Switch>
                 </main>

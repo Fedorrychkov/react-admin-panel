@@ -25,3 +25,5 @@
       box-sizing: border-box; }
       .sidebar__nav-link:hover {
         background-color: #d3dbe3; }
+      .sidebar__nav-link.active {
+        background-color: #d3dbe3; }

@@ -14,7 +14,7 @@ const PanelSidebar = () => {
                     <nav className="sidebar__nav">
                         <ul className="sidebar__nav-list">
                             <li className="sidebar__nav-item">
-                                <NavLink to={`/projects`} className="link sidebar__nav-link">Проекты</NavLink>
+                                <NavLink to={`/projects`} activeClassName="active" className="link sidebar__nav-link">Проекты</NavLink>
                             </li>
                         </ul>
                     </nav>
