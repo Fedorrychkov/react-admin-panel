@@ -1,0 +1,6 @@
+.panel {
+  display: flex;
+  justify-content: space-between; }
+  .panel__content {
+    width: 100%;
+    padding: 16px; }

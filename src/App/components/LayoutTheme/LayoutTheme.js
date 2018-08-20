@@ -3,10 +3,12 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import { DARK_LAYOUT, LIGHT_LAYOUT } from '../../store/layout/actionTypes';
 import SmartTopBar from '../../containers/SmartTopBar/SmartTopBar';
 
 import { AuthPage } from '../../Pages/Auth/AuthPage';
-import { DARK_LAYOUT, LIGHT_LAYOUT } from '../../store/layout/actionTypes';
+import Panel from '../../Pages/Panel/Panel';
+import NotFoundPage from '../../Pages/NotFoundPage/NotFoundPage';
 
 const LayoutTheme = (props: any) => {
     const { layout } = props;
@@ -16,7 +18,9 @@ const LayoutTheme = (props: any) => {
             <SmartTopBar/>
             <section className="content">
                 <Switch>
-                    <Route path='/auth' component={AuthPage}/>
+                    <Route name="panel" exact path='/' component={Panel}/>
+                    <Route name="auth" path='/auth' component={AuthPage}/>
+                    <Route name="error" component={Panel} render={() => <NotFoundPage />}/>
                 </Switch>
             </section>
         </section>

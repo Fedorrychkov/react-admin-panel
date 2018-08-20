@@ -7,6 +7,10 @@
         color: $dark-color;
 
         .topbar {
+            background-color: $lighter-color;
+        }
+
+        .sidebar {
             background-color: $lightest-color;
         }
     }
@@ -17,6 +21,10 @@
         
         .topbar {
             background-color: $darker-color;
+        }
+
+        .sidebar {
+            background-color: $gray-color;
         }
     }
 }

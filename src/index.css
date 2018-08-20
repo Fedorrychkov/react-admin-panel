@@ -309,17 +309,34 @@ template {
     background-color: #f3f7fc;
     color: #6b7784; }
     .layout__light .topbar {
+      background-color: #d3dbe3; }
+    .layout__light .sidebar {
       background-color: #e4ebf3; }
   .layout__dark {
     background-color: #6b7784;
     color: #ffffff; }
     .layout__dark .topbar {
       background-color: #4a5159; }
+    .layout__dark .sidebar {
+      background-color: #8f9ba9; }
 
 .form-box__control {
   width: 100%;
   display: flex;
   justify-content: flex-start; }
+
+.link {
+  color: inherit;
+  transition: 0.15s;
+  text-decoration: none; }
+  .link:hover {
+    text-decoration: none;
+    opacity: .85; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
 
 body {
   font-size: 16px;

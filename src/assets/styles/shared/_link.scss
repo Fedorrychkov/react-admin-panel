@@ -1,0 +1,10 @@
+.link {
+    color: inherit;
+    transition: $animation-fast;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        opacity: .85;
+    }
+}
