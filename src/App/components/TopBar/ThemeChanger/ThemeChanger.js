@@ -3,7 +3,7 @@ import React from 'react';
 import Switch from '@material-ui/core/Switch';
 
 import '../index.css';
-import { DARK_LAYOUT, LIGHT_LAYOUT } from '../../../store/layout/actionTypes';
+import { DARK_LAYOUT, LIGHT_LAYOUT } from '../../../store/actionTypes';
 
 const ThemeChanger = (props: any) => {
     const { layout, onChange } = {...props};

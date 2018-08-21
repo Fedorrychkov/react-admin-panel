@@ -1,6 +1,6 @@
 // @flow
 
-import { LIGHT_LAYOUT, DARK_LAYOUT } from './actionTypes';
+import { LIGHT_LAYOUT, DARK_LAYOUT } from '../actionTypes';
 
 export function changeTheme(state: string) {
     switch (state) {

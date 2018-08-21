@@ -1,6 +1,6 @@
 // @flow
 
-import { LIGHT_LAYOUT, DARK_LAYOUT } from './actionTypes';
+import { LIGHT_LAYOUT, DARK_LAYOUT } from '../actionTypes';
 
 const initialState = {
     currentLayout:  localStorage.getItem('f-panel.theme') || LIGHT_LAYOUT

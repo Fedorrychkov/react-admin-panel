@@ -3,7 +3,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import { DARK_LAYOUT, LIGHT_LAYOUT } from '../../store/layout/actionTypes';
+import { DARK_LAYOUT, LIGHT_LAYOUT } from '../../store/actionTypes';
 import SmartTopBar from '../../containers/SmartTopBar/SmartTopBar';
 
 import { AuthPage } from '../../Pages/Auth/AuthPage';
