@@ -7,7 +7,6 @@ const initialState = {
 }
 
 export function layoutTheme(state: any = initialState, action: any) {
-    console.log(state, action)
     switch (action.type) {
         case LIGHT_LAYOUT:
             return { ...state, currentLayout: LIGHT_LAYOUT };
